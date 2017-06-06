@@ -20,10 +20,30 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
+			<?php // Retrieve only Pages and exclude About, links, contact, etc.
+				$args = array(       // set up arguments
+					'post_type' => 'page'
+		   	);
+				query_posts($args);   // execute the arguments
+			?>
+
 			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+			<div class="tool-box-container">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+				    <div class="tool-box">
+								<a href="<?php the_permalink(); ?>">
+									<div class="tool-box-img">
+					        	<?php the_post_thumbnail(); ?>
+									</div>
+									<h2 class="tool-box-title"><?php the_title(); ?></h2>
+								</a>
+				    </div>
+					<?php endif; ?>
+				<?php endwhile; ?>
+			</div>
+			<div class="clearboth"></div>
+
 
 			<?php twentythirteen_paging_nav(); ?>
 

@@ -832,7 +832,7 @@ img.wp-smiley,
 }
 
 .site-header .site-title:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .site-title {
@@ -940,7 +940,7 @@ ul.nav-menu .focus > ul,
 .nav-menu .current_page_ancestor > a,
 .nav-menu .current-menu-item > a,
 .nav-menu .current-menu-ancestor > a {
-	color: #bc360a;
+	color: #003466;
 	font-style: italic;
 }
 
@@ -1136,12 +1136,12 @@ ul.nav-menu .focus > ul,
 
 .entry-content a,
 .comment-content a {
-	color: #bc360a;
+	color: #003466;
 }
 
 .entry-content a:hover,
 .comment-content a:hover {
-	color: #ea9629;
+	color: #5FA2DD;
 }
 
 .entry-content .more-link {
@@ -3226,4 +3226,53 @@ footer.entry-meta {
 	.comment-reply-login {
 		color: #333;
 	}
+}
+
+/*Geral*/
+
+.clearboth {
+	clear: both;
+}
+
+/*Pagina Principal (Tool-box)*/
+
+.tool-box-container {
+		max-width: 1024px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+}
+
+.tool-box {
+	background-color: #F5F5F5;
+	border: 2px solid #e1e1e1;
+	float: left;
+	border-radius: 5px;
+	min-width: 300px;
+	min-height: 300px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+.tool-box a, .tool-box a:visited {
+		color: #777;
+}
+
+.tool-box a:hover {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.tool-box-img {
+	text-align: center;
+}
+
+.tool-box-img img {
+	width: 200px;
+	height: 200px;
+}
+
+.tool-box-title {
+	text-align: center;
 }
