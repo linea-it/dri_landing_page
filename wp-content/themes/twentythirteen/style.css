@@ -113,7 +113,7 @@ body {
 }
 
 a {
-	color: #ca3c08;
+	color: #5FA2DD;
 	text-decoration: none;
 }
 
@@ -742,7 +742,7 @@ img.alignnone {
 .wp-caption .wp-caption-text,
 .entry-caption,
 .gallery-caption {
-	color: #220e10;
+	color: #000;
 	font-size: 18px;
 	font-style: italic;
 	font-weight: 300;
@@ -817,10 +817,11 @@ img.wp-smiley,
 
 .site-header {
 	position: relative;
+	background-color: #003466;
 }
 
 .site-header .home-link {
-	color: #141412;
+	color: #e1e1e1;
 	display: block;
 	margin: 0 auto;
 	max-width: 1080px;
@@ -885,13 +886,13 @@ div.nav-menu > ul {
 .nav-menu li a:hover,
 .nav-menu li:focus > a,
 .nav-menu li a:focus {
-	background-color: #220e10;
+	background-color: #000;
 	color: #fff;
 }
 
 .nav-menu .sub-menu,
 .nav-menu .children {
-	background-color: #220e10;
+	background-color: #000;
 	border: 2px solid #f7f5e7;
 	border-top: 0;
 	padding: 0;
@@ -949,7 +950,7 @@ ul.nav-menu .focus > ul,
 
 /* Navbar */
 .navbar {
-	background-color: #f7f5e7;
+	background-color: #e1e1e1;
 	margin: 0 auto;
 	max-width: 1600px;
 	width: 100%;
@@ -1042,7 +1043,7 @@ ul.nav-menu .focus > ul,
 }
 
 .entry-title a:hover {
-	color: #ea9629;
+	color: #5FA2DD;
 }
 
 
@@ -1057,11 +1058,11 @@ ul.nav-menu .focus > ul,
 }
 
 .entry-meta a {
-	color: #bc360a;
+	color: #003466;
 }
 
 .entry-meta a:hover {
-	color: #bc360a;
+	color: #5FA2DD;
 }
 
 .entry-meta > span {
@@ -1229,7 +1230,7 @@ footer.entry-meta {
 /* Mediaelements */
 .hentry .mejs-mediaelement,
 .hentry .mejs-container .mejs-controls {
-	background: #220e10;
+	background: #000;
 }
 
 .hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
@@ -1737,7 +1738,7 @@ footer.entry-meta {
 }
 
 .format-video .entry-meta {
-	color: #220e10;
+	color: #000;
 }
 
 
@@ -2558,7 +2559,7 @@ footer.entry-meta {
  */
 
 .site-footer {
-	background-color: #e8e5ce;
+	background-color: #999;
 	color: #686758;
 	font-size: 14px;
 	text-align: center;
@@ -2570,11 +2571,11 @@ footer.entry-meta {
 }
 
 .site-footer a {
-	color: #686758;
+	color: #e1e1e1;
 }
 
 .site-footer .sidebar-container {
-	background-color: #220e10;
+	background-color: #000;
 	padding: 20px 0;
 }
 
@@ -2608,7 +2609,7 @@ footer.entry-meta {
 }
 
 .site-footer .widget a {
-	color: #e6402a;
+	color: #5FA2DD;
 }
 
 .site-footer .widget-title,
@@ -2939,7 +2940,7 @@ footer.entry-meta {
 
 	.toggled-on .nav-menu > li a:focus,
 	.toggled-on .nav-menu > ul a:focus {
-		background-color: #220e10;
+		background-color: #000;
 		color: #fff;
 	}
 
