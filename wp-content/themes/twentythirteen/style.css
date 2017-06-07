@@ -923,7 +923,7 @@ ul.nav-menu ul a:hover,
 .nav-menu ul ul a:hover,
 ul.nav-menu ul a:focus,
 .nav-menu ul ul a:focus {
-	background-color: #db572f;
+	background-color: #003466;
 }
 
 ul.nav-menu li:hover > ul,
@@ -3237,26 +3237,52 @@ footer.entry-meta {
 /*Pagina Principal (Tool-box)*/
 
 .tool-box-container {
-		max-width: 1024px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 50px;
-		margin-bottom: 50px;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70%;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .tool-box {
 	background-color: #F5F5F5;
 	border: 2px solid #e1e1e1;
-	float: left;
 	border-radius: 5px;
-	min-width: 300px;
-	min-height: 300px;
-	margin-right: 30px;
-	margin-bottom: 30px;
+	width: 30%;
+	height: 300px;
+	margin-right: 1%;
+	margin-bottom: 1%;
+}
+
+.sky-viewer {
+	order: 0;
+}
+
+.image-viewer {
+	order: 1;
+}
+
+.target-viewer {
+	order: 2;
+}
+
+.user-query {
+	order: 3;
+}
+
+.catalog-builder {
+	order: 4;
+}
+
+.science-products {
+	order: 5;
 }
 
 .tool-box a, .tool-box a:visited {
-		color: #777;
+	color: #777;
 }
 
 .tool-box a:hover {
@@ -3269,10 +3295,24 @@ footer.entry-meta {
 }
 
 .tool-box-img img {
-	width: 200px;
-	height: 200px;
+	width: 80%;
+	max-width: 200px;
+	height: 50%;
+	max-height: 200px;
 }
 
 .tool-box-title {
 	text-align: center;
+}
+
+@media (max-width: 1024px) {
+	.tool-box-container {
+		flex-direction: column;
+		align-items: center;
+		max-width: 100%;
+	}
+
+	.tool-box {
+		width: 100%;
+	}
 }

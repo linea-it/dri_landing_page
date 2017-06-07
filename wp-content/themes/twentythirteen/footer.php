@@ -15,8 +15,7 @@
 			<?php get_sidebar( 'main' ); ?>
 
 			<div class="site-info">
-				<?php do_action( 'twentythirteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentythirteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
+				<a href="http://www.linea.gov.br">Powered by <img src="wp-content/uploads/2017/06/linea-logo-mini.png"></a>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->

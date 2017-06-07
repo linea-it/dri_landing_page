@@ -28,20 +28,24 @@ get_header(); ?>
 			?>
 
 			<?php /* The loop */ ?>
-			<div class="tool-box-container">
+			<ul class="tool-box-container">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-				    <div class="tool-box">
+						<?php
+							global $post;
+							$slug = $post->post_name;
+						?>
+						<li class="tool-box <?php echo $slug; ?>">
 								<a href="<?php the_permalink(); ?>">
 									<div class="tool-box-img">
 					        	<?php the_post_thumbnail(); ?>
 									</div>
 									<h2 class="tool-box-title"><?php the_title(); ?></h2>
 								</a>
-				    </div>
+				    </li>
 					<?php endif; ?>
 				<?php endwhile; ?>
-			</div>
+			</ul>
 			<div class="clearboth"></div>
 
 
