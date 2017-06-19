@@ -15,7 +15,9 @@
 			<?php get_sidebar( 'main' ); ?>
 
 			<div class="site-info">
-				<a href="http://www.linea.gov.br">Powered by <img src="wp-content/uploads/2017/06/linea-logo-mini.png"></a>
+				<a href="http://www.linea.gov.br">Powered by
+					<img src="http://dri.linea.gov.br/wp-content/uploads/2017/06/linea-logo-mini.png">
+				</a>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
