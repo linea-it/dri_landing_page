@@ -118,7 +118,7 @@ a {
 }
 
 a:visited {
-	color: #ac0404;
+	color: #215078;
 }
 
 a:focus {
@@ -127,7 +127,7 @@ a:focus {
 
 a:active,
 a:hover {
-	color: #ea9629;
+	color: #5FA2DD;
 	outline: 0;
 }
 
@@ -3333,4 +3333,32 @@ img.logo-des {
 .site-info img {
 	width: 150px;
 	margin-left: 30px;
+}
+
+/*Tool Page*/
+
+.tool-content, .tool-side {
+}
+
+
+header.entry-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.go-to-button-tool {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 2%;
+	background-color: #efefef;
+	max-width: 160px;
+}
+.go-to-button-tool img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.go-to-button-tool p {
+	margin-bottom: 0;
+	text-align: center;
 }

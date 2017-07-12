@@ -14,15 +14,20 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
+		<div id="content" class="site-content row" role="main">
+			<section class="tool-content col-md-8">
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-
 						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<div class="go-to-button-tool">
+							<a href="<?php echo get_the_excerpt() ?>" target="_blank">
+								<?php the_post_thumbnail(array(100,100)); ?>
+								<p>Acessar <?php the_title() ?></p>
+							</a>
+						</div>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
@@ -37,6 +42,15 @@ get_header(); ?>
 
 				<?php comments_template(); ?>
 			<?php endwhile; ?>
+			</section>
+			<section class="tool-side col-md-2 col-md-offset-1">
+				<article class="tool-side-news">
+					<h2>News</h2>
+				</article>
+				<article class="tool-side-notes">
+					<h2>Release Notes</h2>
+				</article>
+			</section>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
