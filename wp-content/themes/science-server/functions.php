@@ -616,4 +616,10 @@ function twentythirteen_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 
-add_post_type_support( 'page', 'excerpt' );
+
+
+function adiciona_suporte_page() {
+	register_taxonomy_for_object_type('category', 'page');
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'adiciona_suporte_page' );

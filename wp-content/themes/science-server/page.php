@@ -43,14 +43,7 @@ get_header(); ?>
 				<?php comments_template(); ?>
 			<?php endwhile; ?>
 			</section>
-			<section class="tool-side col-md-2 col-md-offset-1">
-				<article class="tool-side-news">
-					<h2>News</h2>
-				</article>
-				<article class="tool-side-notes">
-					<h2>Release Notes</h2>
-				</article>
-			</section>
+			<?php get_sidebar('page') ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
