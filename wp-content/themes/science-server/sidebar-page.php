@@ -5,7 +5,9 @@
 ?>
 <section class="tool-side col-md-2 col-md-offset-1">
   <article class="tool-side-news">
-    <h2>News</h2>
+    <header class="side-header">
+      <h2>News </h2><span><a class="more-link" href="<?php echo get_category_link( get_cat_ID('news') ) ?>">+ more News</a></span>
+    </header>
     <?php
       $news_query = new WP_Query( array('category_name' => 'news') );
       $limite_posts = 3;
@@ -35,7 +37,9 @@
     ?>
   </article>
   <article class="tool-side-notes">
-    <h2>Release Notes</h2>
+    <header class="side-header">
+      <h2>Release Notes</h2><span><a class="more-link" href="<?php echo get_category_link( get_cat_ID('release notes') ) ?>">+ more Release Notes</a></span>
+    </header>
     <?php
       $news_query = new WP_Query( array('category_name' => 'release-notes') );
       $limite_posts = 4;

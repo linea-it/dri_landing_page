@@ -150,6 +150,9 @@ h1 {
 	font-size: 48px;
 	margin: 33px 0;
 }
+h1 a, h2 a, h3 a {
+	color: #337ab7;
+}
 
 h2 {
 	font-size: 30px;
@@ -2038,7 +2041,7 @@ footer.entry-meta {
  */
 
 .archive-header {
-	background-color: #e8e5ce;
+	background-color: #EBEBEB;
 }
 
 .archive-title,
@@ -3369,12 +3372,16 @@ header.entry-header {
 	display: inline-block;
 	width: 100%;
 	max-height: 110px;
+	height: 110px;
 	overflow: hidden;
 	border: 1px solid #ddd;
   border-radius: 5px;
+	position: relative;
 }
 .news-thumbnail {
 	width: 100%;
+	position: absolute;
+	top: -30%;
 }
 .news-title {
 	font-size: 1.2em;
@@ -3393,4 +3400,29 @@ a.news-title-link, a.release-title-link {
   margin-top: 3%;
 	margin-bottom: 20%;
 	color: #337ab7;
+}
+.side-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-bottom: 15%;
+}
+.side-header h2 {
+	margin-bottom: 0;
+}
+.side-header span {
+	align-self: flex-end;
+}
+
+/*Category*/
+
+.category-post {
+	margin-bottom: 10%;
+}
+.category-separator {
+	border-bottom: 1px solid #7690A6;
+  border-left: 2px solid #7690A6;
+  display: block;
+  width: 10%;
+  height: 30px;
 }
