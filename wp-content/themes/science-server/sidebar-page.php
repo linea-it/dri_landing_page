@@ -28,7 +28,7 @@
             <a class="news-title-link" href="<?php the_permalink() ?>">
               <h5 class="news-title"><?php echo the_title() ?></h5>
             </a>
-            <p class="news-date"><em><?php the_time('j \d\e F, Y') ?></em></p>
+            <p class="news-date"><em><?php the_time('F j, Y') ?></em></p>
           <?php
           $post_num++;
         }

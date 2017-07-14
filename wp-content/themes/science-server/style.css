@@ -3344,7 +3344,7 @@ img.logo-des {
 }
 
 
-header.entry-header {
+header.tool-page-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -3425,4 +3425,10 @@ a.news-title-link, a.release-title-link {
   display: block;
   width: 10%;
   height: 30px;
+}
+
+/*Single Page*/
+
+.single-post-date {
+	color: #337ab7;
 }

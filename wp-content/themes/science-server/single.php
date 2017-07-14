@@ -11,6 +11,7 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<span class="single-post-date"><em><?php the_time('F j, Y') ?></em></span>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
