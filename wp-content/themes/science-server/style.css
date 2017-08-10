@@ -147,7 +147,7 @@ h6 {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 30px;
 	margin: 33px 0;
 }
 h1 a, h2 a, h3 a {
@@ -155,7 +155,7 @@ h1 a, h2 a, h3 a {
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 20px;
 	margin: 25px 0;
 }
 
@@ -830,7 +830,7 @@ img.wp-smiley,
 	align-items: center;
 	margin: 0 auto;
 	max-width: 90%;
-	min-height: 160px;
+	min-height: 120px;
 	padding: 0 20px;
 	text-decoration: none;
 	width: 100%;
@@ -841,7 +841,7 @@ img.wp-smiley,
 }
 
 .site-title {
-	font-size: 60px;
+	font-size: 50px;
 	font-weight: bold;
 	line-height: 1;
 	margin: 0;
@@ -3245,10 +3245,9 @@ footer.entry-meta {
 	padding: 0;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 70%;
+	max-width: 50%;
 	list-style-type: none;
 	display: flex;
-	justify-content: center;
 	flex-wrap: wrap;
 }
 
@@ -3257,7 +3256,7 @@ footer.entry-meta {
 	border: 2px solid #e1e1e1;
 	border-radius: 5px;
 	width: 30%;
-	height: 300px;
+	height: 210px;
 	margin-right: 1%;
 	margin-bottom: 1%;
 }
@@ -3300,7 +3299,7 @@ footer.entry-meta {
 }
 
 .tool-box-img img {
-	width: 80%;
+	width: 60%;
 	max-width: 200px;
 	height: 50%;
 	max-height: 200px;
@@ -3308,9 +3307,10 @@ footer.entry-meta {
 
 .tool-box-title {
 	text-align: center;
+	font-size: 25px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
 	.tool-box-container {
 		flex-direction: column;
 		align-items: center;
@@ -3319,22 +3319,30 @@ footer.entry-meta {
 
 	.tool-box {
 		width: 100%;
+		height: 280px;
 	}
 }
 
 /* Header */
 
 img.logo-des {
-	max-height: 120px;
+	max-height: 80px;
+}
+.navbar {
+	border-radius: 0;
 }
 
 /*Footer*/
 
+.site-info {
+	margin: 0 0 0 auto;
+	max-width: 480px;
+}
 .site-info a {
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 .site-info img {
-	width: 150px;
+	width: 90px;
 	margin-left: 30px;
 }
 
