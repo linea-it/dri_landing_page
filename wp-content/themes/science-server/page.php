@@ -22,12 +22,14 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header tool-page-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="go-to-button-tool">
-							<a href="<?php echo get_the_excerpt() ?>" target="_blank">
-								<?php the_post_thumbnail(array(100,100)); ?>
-								<p>Go to <?php the_title() ?></p>
-							</a>
-						</div>
+                        <?php if (in_category('tool-page')) : ?>
+    						<div class="go-to-button-tool">
+    							<a href="<?php echo get_the_excerpt() ?>" target="_blank">
+    								<?php the_post_thumbnail(array(100,100)); ?>
+    								<p>Go to <?php the_title() ?></p>
+    							</a>
+    						</div>
+                        <?php endif; ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
