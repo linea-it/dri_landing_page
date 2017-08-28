@@ -858,8 +858,12 @@ img.wp-smiley,
 .main-navigation {
 	clear: both;
 	margin: 0 auto;
-	max-width: 90%;
 	position: relative;
+}
+.main-navigation div {
+    display: inline-block;
+    width: 78%;
+    box-sizing: border-box;
 }
 
 ul.nav-menu,
@@ -954,7 +958,7 @@ ul.nav-menu .focus > ul,
 	margin: 0 auto;
     min-height: 0;
 	max-width: 1600px;
-	width: 100%;
+	width: 90%;
     border: none;
 }
 
@@ -3337,6 +3341,13 @@ img.logo-des {
 }
 .navbar {
 	border-radius: 0;
+}
+span.user-login {
+    width: 20%;
+    color: #fff;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: right;
 }
 
 /*Footer*/
