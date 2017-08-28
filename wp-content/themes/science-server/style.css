@@ -826,7 +826,7 @@ img.wp-smiley,
 	align-items: center;
 	margin: 0 auto;
 	max-width: 90%;
-	min-height: 120px;
+	min-height: 80px;
 	padding: 0 20px;
 	text-decoration: none;
 	width: 100%;
@@ -859,7 +859,6 @@ img.wp-smiley,
 	clear: both;
 	margin: 0 auto;
 	max-width: 90%;
-	min-height: 45px;
 	position: relative;
 }
 
@@ -877,9 +876,9 @@ div.nav-menu > ul {
 .nav-menu li a {
 	color: #fff;
 	display: block;
-	font-size: 15px;
+	font-size: 1.1em;
 	line-height: 1;
-	padding: 15px 20px;
+	padding: 8px 10px;
 	text-decoration: none;
 }
 
@@ -3257,6 +3256,7 @@ footer.entry-meta {
 	height: 210px;
 	margin-right: 3%;
 	margin-bottom: 3%;
+    position: relative;
 }
 
 .sky-viewer {
@@ -3306,8 +3306,17 @@ footer.entry-meta {
 .tool-box-title {
 	text-align: center;
 	font-size: 25px;
+    margin: 15px 0;
 }
-
+.tool-box a.readme-tool-link {
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    color: #5FA2DD;
+}
+.tool-box a.readme-tool-link:hover {
+    text-decoration: underline;
+}
 @media (max-width: 767px) {
 	.tool-box-container {
 		flex-direction: column;
@@ -3354,6 +3363,9 @@ header.tool-page-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+}
+header.tool-page-header a {
+    color: #000;
 }
 .go-to-button-tool {
 	border: 1px solid #ddd;
@@ -3411,13 +3423,22 @@ a.news-title-link, a.release-title-link {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	margin-bottom: 15%;
+	margin-bottom: 10%;
+}
+.side-header h1 {
+    margin-bottom: 1%;
 }
 .side-header h2 {
 	margin-bottom: 0;
 }
 .side-header span {
 	align-self: flex-end;
+}
+.news-content, .improvements-content {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 2px solid #eee;
+    padding: 0 6%;
 }
 
 /*Category*/

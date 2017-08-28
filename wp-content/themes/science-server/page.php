@@ -15,20 +15,21 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content row" role="main">
-			<section class="tool-content col-md-8">
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
+            <?php if (in_category('tool-page') || in_category('release-notes')) : ?>
+            <section class="tool-content col-md-8">
+            <?php else: ?>
+            <section class="tool-content col-md-8 col-md-offset-2">
+            <?php endif; ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header tool-page-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
                         <?php if (in_category('tool-page')) : ?>
-    						<div class="go-to-button-tool">
-    							<a href="<?php echo get_the_excerpt() ?>" target="_blank">
-    								<?php the_post_thumbnail(array(100,100)); ?>
-    								<p>Go to <?php the_title() ?></p>
-    							</a>
-    						</div>
+                            <a href="<?php echo get_the_excerpt() ?>" target="_blank">
+                                <h1 class="entry-title">Go to <?php the_title(); ?></h1>
+                            </a>
+                        <?php else: ?>
+                            <h1 class="entry-title"><?php the_title(); ?></h1>
                         <?php endif; ?>
 					</header><!-- .entry-header -->
 
@@ -45,8 +46,11 @@ get_header(); ?>
 				<?php comments_template(); ?>
 			<?php endwhile; ?>
 			</section>
-			<?php get_sidebar('page') ?>
-
+            <?php
+                if (in_category('tool-page')):
+                    get_sidebar('tool-page');
+                endif;
+            ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

@@ -36,12 +36,13 @@ get_header(); ?>
 							$slug = $post->post_name;
 						?>
 						<li class="tool-box <?php echo $slug; ?>">
-								<a href="<?php the_permalink(); ?>">
+								<a href="<?php echo get_the_excerpt() ?>">
 									<div class="tool-box-img">
 					        	<?php the_post_thumbnail(); ?>
 									</div>
 									<h2 class="tool-box-title"><?php the_title(); ?></h2>
 								</a>
+                                <a class="readme-tool-link" href="<?php the_permalink(); ?>">Read Me</a>
 				    </li>
 					<?php endif; ?>
 				<?php endwhile; ?>

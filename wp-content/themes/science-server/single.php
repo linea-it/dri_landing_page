@@ -26,7 +26,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 			</section>
-			<?php get_sidebar('page') ?>
+			<?php get_sidebar('release-notes') ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
