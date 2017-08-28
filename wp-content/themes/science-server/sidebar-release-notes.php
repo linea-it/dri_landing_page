@@ -6,7 +6,18 @@
 <section class="tool-side col-md-3">
   <article class="tool-side-notes">
     <header class="side-header">
-      <h1>Release Notes</h1><span><a class="more-link" href="<?php echo get_category_link( get_cat_ID('release notes') ) ?>">+ more Release Notes</a></span>
+        <?php
+            $cat_ID = get_cat_ID('release notes');
+            $cat_name = get_cat_name( $cat_ID );
+        ?>
+      <h1>
+          <?php echo $cat_name ?>
+      </h1>
+      <span>
+          <a class="more-link" href="<?php echo get_category_link( $cat_ID ) ?>">
+              + more Release Notes
+          </a>
+      </span>
     </header>
     <?php
       $news_query = new WP_Query( array('category_name' => 'release-notes', 'posts_per_page' => 4) );

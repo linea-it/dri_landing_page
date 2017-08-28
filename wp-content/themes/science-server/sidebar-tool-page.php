@@ -5,15 +5,15 @@
 ?>
 <section class="tool-side col-md-3">
   <article class="tool-side-news">
-    <header class="side-header">
-      <h1>What is New</h1>
-    </header>
     <?php
       $news_query = new WP_Query( array('category_name' => 'news', 'post_type' => 'page') );
       if ( $news_query->have_posts() ){
         while ( $news_query->have_posts() ) {
           $news_query->the_post();
           ?>
+          <header class="side-header">
+              <h1><?php the_title() ?></h1>
+          </header>
             <div class="news-content"><?php echo the_content() ?></div>
             <?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
           <?php
@@ -23,16 +23,16 @@
     ?>
   </article>
   <article class="tool-side-improvements">
-    <header class="side-header">
-      <h1>New Improvements</h1>
-    </header>
     <?php
       $news_query = new WP_Query( array('category_name' => 'improvements', 'post_type' => 'page') );
       if ( $news_query->have_posts() ){
         while ( $news_query->have_posts() ) {
           $news_query->the_post();
           ?>
-            <div class="improvements-content"><?php echo the_content() ?></div>
+          <header class="side-header">
+          <h1><?php the_title() ?></h1>
+          </header>
+          <div class="improvements-content"><?php echo the_content() ?></div>
             <?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
           <?php
         }
