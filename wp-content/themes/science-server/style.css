@@ -3480,3 +3480,15 @@ span.fscf-required-indicator {
     padding: 8px;
     color: #B62A25;
 }
+
+/*Video Gallery*/
+.button-block {
+    display: none;
+}
+.slider-content.panel {
+    box-shadow: none;
+}
+.right-block .title {
+    color: #000 !important;
+    margin: 0 !important;
+}
