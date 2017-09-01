@@ -3451,6 +3451,14 @@ a.news-title-link, a.release-title-link {
     border: 2px solid #eee;
     padding: 0 6%;
 }
+.releases-box {
+    overflow-y: scroll;
+    border: 2px solid #eee;
+    padding: 2%;
+    margin-top: 10%;
+    min-height: 500px;
+    max-height: 500px;
+}
 
 /*Category*/
 

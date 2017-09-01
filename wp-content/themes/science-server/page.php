@@ -16,7 +16,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content row" role="main">
 			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+                while ( have_posts() ) : the_post();
+                $pagina_atual_id = $post->ID;
+            ?>
             <?php if (in_category('tool-page') || in_category('release-notes')) : ?>
             <section class="tool-content col-md-8">
             <?php else: ?>
@@ -48,7 +51,7 @@ get_header(); ?>
 			</section>
             <?php
                 if (in_category('tool-page')):
-                    get_sidebar('tool-page');
+                    require_once 'sidebar-release-notes.php';
                 endif;
             ?>
 		</div><!-- #content -->

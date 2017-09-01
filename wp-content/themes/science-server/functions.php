@@ -617,9 +617,37 @@ function twentythirteen_customize_preview_js() {
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 
 
+add_action('init', 'criar_taxonomia_ferramenta');
+
+function criar_taxonomia_ferramenta() {
+    $nome_singular = 'Ferramenta';
+    $nome = 'Ferramentas';
+    $labels = array(
+        'name'                       => $nome,
+        'singular_name'              => $nome_singular,
+        'search_items'               => 'Procurar ' . $nome,
+        'popular_items'              => $nome . 'Populares',
+        'all_items'                  => 'Todas as ' . $nome,
+        'edit_item'                  => 'Editar ' . $nome_singular,
+        'update_item'                => 'Atualizar ' . $nome_singular,
+        'add_new_item'               => 'Adicionar nova ' . $nome_singular,
+        'new_item_name'              => 'Nova ' . $nome_singular,
+        'separate_items_with_commas' => 'Separar ' . $nome . ' com vírgulas',
+        'add_or_remove_items'        => 'Adicionar ou remover ' . $nome,
+        'choose_from_most_used'      => 'Escolher entre as ' . $nome . ' mais usadas',
+        'not_found'                  => 'Nenhuma ' . $nome_singular . ' encontrada',
+        'menu_name'                  => $nome_plural
+    );
+    $args = array(
+        'hierarchical'          => false,
+        'labels'                => $labels
+    );
+    register_taxonomy( 'ferramenta', 'post' , $args);
+}
 
 function adiciona_suporte_page() {
-	register_taxonomy_for_object_type('category', 'page');
-	add_post_type_support( 'page', 'excerpt' );
+    register_taxonomy_for_object_type('category', 'page');
+    register_taxonomy_for_object_type('ferramenta', 'page');
+    add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'adiciona_suporte_page' );
