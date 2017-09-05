@@ -44,7 +44,10 @@
 					<button class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></button>
 					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
-                    <span class="user-login"></span>
+                    <div class="login-menu">
+                        <span class="user-login">Logged as: guilherme.soares</span>
+                        <a href="#" class="login-link"></a>
+                    </div>
                 </nav><!-- #site-navigation -->
 			</div><!-- #navbar -->
 		</header><!-- #masthead -->

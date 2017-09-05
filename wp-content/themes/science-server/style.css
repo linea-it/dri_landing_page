@@ -860,9 +860,9 @@ img.wp-smiley,
 	margin: 0 auto;
 	position: relative;
 }
-.main-navigation div {
+.main-navigation div:first-of-type {
     display: inline-block;
-    width: 78%;
+    width: 65%;
     box-sizing: border-box;
 }
 
@@ -3342,12 +3342,21 @@ img.logo-des {
 .navbar {
 	border-radius: 0;
 }
-span.user-login {
-    width: 20%;
-    color: #fff;
-    box-sizing: border-box;
+div.login-menu {
     display: inline-block;
+    color: #fff;
+    width: 32%;
     text-align: right;
+}
+span.user-login {
+    margin-right: 5%;
+}
+a.login-link {
+    color: #fff;
+}
+a.login-link:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /*Footer*/
