@@ -1,7 +1,9 @@
 <?php
 /**
-  * SideBar com News e Release Notes
+  * SideBar com Release Notes
   */
+
+require_once 'helper.php';
 ?>
 <section class="tool-side col-md-3">
   <article class="tool-side-notes">
@@ -13,25 +15,36 @@
       <h1>
           <?php echo $cat_name ?>
       </h1>
-      <span>
-          <a class="more-link" href="<?php echo get_category_link( $cat_ID ) ?>">
-              + more Release Notes
-          </a>
-      </span>
     </header>
+    <div class="releases-box">
     <?php
-      $news_query = new WP_Query( array('category_name' => 'release-notes', 'posts_per_page' => 4) );
-      if ( $news_query->have_posts() ){
-        while ( $news_query->have_posts() ) {
-          $news_query->the_post();
-          ?>
-            <a class="release-title-link" href="<?php the_permalink() ?>">
-              <h3><?php echo the_title() ?></h3>
-            </a>
-          <?php
-        }
+        $ferramenta_da_pagina = get_ferramenta_slug($pagina_atual_id);
+        $args = array(
+            'post_type' => 'post',
+            'category_name' => 'release-notes',
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'ferramenta',
+                    'field'    => 'slug',
+                    'terms'    => $ferramenta_da_pagina
+                ),
+            ),
+        );
+        $news_query = new WP_Query( $args );
+        if ( $news_query->have_posts() ){
+            while ( $news_query->have_posts() ) {
+                $news_query->the_post();
+                $version = get_release_note_version($post->ID);
+                ?>
+                <a class="release-title-link" href="<?php the_permalink() ?>">
+                  <h3><?php echo $version ?></h3>
+                </a>
+                <?php
+            }
       }
 
     ?>
+    </div>
   </article>
 </section>

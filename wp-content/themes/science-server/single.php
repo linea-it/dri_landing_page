@@ -1,6 +1,9 @@
 <?php
 
-get_header(); ?>
+get_header();
+
+require_once 'helper.php';
+?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content row" role="main">
@@ -10,8 +13,20 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<span class="single-post-date"><em><?php the_time('F j, Y') ?></em></span>
+                        <?php
+                        if (in_category('release-notes')):
+                            $ferramenta = get_ferramenta($post->ID);
+                            $release_version = get_release_note_version(get_the_ID());
+                            ?>
+                                <h1 class="entry-title"><?php echo $ferramenta ?>: Release Note</h1>
+                                <h2 class="release-title-version">Version: <?php echo $release_version ?></h2>
+                            <?php
+                        else:
+                            ?>
+                            <h1 class="entry-title"><?php the_title(); ?></h1>
+                            <?php
+                        endif;
+                        ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
@@ -26,7 +41,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 			</section>
-			<?php get_sidebar('release-notes') ?>
+			<?php require_once 'sidebar-preview-release.php'; ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

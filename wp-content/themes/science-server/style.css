@@ -3460,6 +3460,14 @@ a.news-title-link, a.release-title-link {
     border: 2px solid #eee;
     padding: 0 6%;
 }
+.releases-box {
+    overflow-y: scroll;
+    border: 2px solid #eee;
+    padding: 2%;
+    margin-top: 10%;
+    min-height: 500px;
+    max-height: 500px;
+}
 
 /*Category*/
 
@@ -3499,4 +3507,16 @@ span.fscf-required-indicator {
     font-size: 1.5em;
     padding: 8px;
     color: #B62A25;
+}
+
+/*Video Gallery*/
+.button-block {
+    display: none;
+}
+.slider-content.panel {
+    box-shadow: none;
+}
+.right-block .title {
+    color: #000 !important;
+    margin: 0 !important;
 }
