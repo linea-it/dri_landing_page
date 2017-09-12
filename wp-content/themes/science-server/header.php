@@ -25,6 +25,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/images/font-awesome/css/font-awesome.min.css">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -45,8 +46,7 @@
 					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
                     <div class="login-menu">
-                        <span class="user-login">Logged as: guilherme.soares</span>
-                        <a href="#" class="login-link"></a>
+                        <a href="#" class="login-link"><span class="login-link-text"></span></a>
                     </div>
                 </nav><!-- #site-navigation -->
 			</div><!-- #navbar -->
