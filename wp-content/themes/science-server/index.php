@@ -22,7 +22,9 @@ get_header(); ?>
 
         <?php // Retrieve only Pages and exclude About, links, contact, etc.
             $args = array(       // set up arguments
-                'post_type' => 'page'
+                'post_type' => 'page',
+                'category_name' => 'tool-page',
+                'posts_per_page' => -1
             );
             query_posts($args);   // execute the arguments
         ?>
@@ -48,10 +50,6 @@ get_header(); ?>
                 <?php endwhile; ?>
             </ul>
         </section>
-
-
-
-        <?php twentythirteen_paging_nav(); ?>
 
     <?php else : ?>
     	<?php get_template_part( 'content', 'none' ); ?>
