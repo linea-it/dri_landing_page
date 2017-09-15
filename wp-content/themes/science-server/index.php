@@ -44,7 +44,7 @@ get_header(); ?>
                                 </div>
                                 <h2 class="tool-box-title"><?php the_title(); ?></h2>
                             </a>
-                            <a class="readme-tool-link" href="<?php the_permalink(); ?>">Read Me</a>
+                            <a class="readme-tool-link" href="<?php the_permalink(); ?>">More</a>
                         </li>
                     <?php endif; ?>
                 <?php endwhile; ?>
