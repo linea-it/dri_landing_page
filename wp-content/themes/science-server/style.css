@@ -3470,10 +3470,10 @@ a.news-title-link, a.release-title-link {
     border: 2px solid #eee;
     padding: 2%;
     margin-top: 10%;
-    min-height: 500px;
-    max-height: 500px;
+    min-height: 300px;
+    max-height: 300px;
 }
-.news-box {
+.news-box, .planned-box {
     overflow-y: scroll;
     border: 2px solid #eee;
     padding: 2%;

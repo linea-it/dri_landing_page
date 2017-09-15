@@ -51,7 +51,14 @@ get_header(); ?>
 			</section>
             <?php
                 if (in_category('tool-page')):
+                ?>
+                <section class="tool-side col-md-3">
+                <?php
                     require_once 'sidebar-release-notes.php';
+                    require_once 'sidebar-planned.php';
+                ?>
+                </section>
+                <?php
                 endif;
             ?>
 		</div><!-- #content -->
