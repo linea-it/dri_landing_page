@@ -41,7 +41,11 @@ require_once 'helper.php';
 
 			<?php endwhile; ?>
 			</section>
-			<?php require_once 'sidebar-preview-release.php'; ?>
+			<?php
+                if (in_category('release-notes')):
+                    require_once 'sidebar-preview-release.php';
+                endif;
+            ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
