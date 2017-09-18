@@ -24,7 +24,12 @@ require_once 'helper.php';
                 $news_query->the_post();
                 ?>
                 <a class="news-title-link" href="<?php the_permalink() ?>">
-                  <h3><?php echo the_title() ?></h3>
+                  <h3 class="news-box-title">
+                      <?php echo the_title() ?> -
+                      <span class="news-box-date">
+                          <?php echo get_the_date( 'F j, Y' ); ?>
+                      </span>
+                  </h3>
                 </a>
                 <?php
             }
