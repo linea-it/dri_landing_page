@@ -37,11 +37,11 @@ require_once 'helper.php';
                 $version = get_release_note_version($post->ID);
                 ?>
                 <a class="release-title-link" href="<?php the_permalink() ?>">
-                  <h3>
-                      <?php echo $version ?> - 
+                  <h3 class="release-title">
                       <span class="release-date">
-                          <?php echo get_the_date( 'F j, Y' ); ?>
-                      </span>
+                          <?php echo get_the_date( 'm/d/Y' ); ?>
+                      </span> -
+                      <?php echo $version ?>
                   </h3>
                 </a>
                 <?php

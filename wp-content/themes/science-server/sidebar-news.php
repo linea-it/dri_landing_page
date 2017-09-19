@@ -25,10 +25,10 @@ require_once 'helper.php';
                 ?>
                 <a class="news-title-link" href="<?php the_permalink() ?>">
                   <h3 class="news-box-title">
-                      <?php echo the_title() ?> -
                       <span class="news-box-date">
-                          <?php echo get_the_date( 'F j, Y' ); ?>
-                      </span>
+                          <?php echo get_the_date( 'm/d/Y' ); ?>
+                      </span> - 
+                      <?php echo the_title() ?>
                   </h3>
                 </a>
                 <?php

@@ -3495,11 +3495,8 @@ a.news-title-link, a.release-title-link {
     margin: 0 0 3% 0;
     font-size: 1.4em;
 }
-.news-box-date {
-    font-size: .7em;
-}
-.release-date {
-    font-size: .7em;
+.release-title {
+    margin: 0 4% 0 0;
 }
 
 /*Category*/
