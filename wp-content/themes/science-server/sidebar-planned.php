@@ -8,8 +8,8 @@ require_once 'helper.php';
   <article class="tool-side-planned">
     <header class="side-header">
         <?php
-            $cat_ID = get_cat_ID('Planned Improvements');
-            $cat_name = get_cat_name( $cat_ID );
+            $cat_obj = get_category_by_slug('planned-improvements');
+            $cat_name = get_cat_name( $cat_obj->term_id );
         ?>
       <h1>
           <?php echo $cat_name ?>

@@ -3448,7 +3448,7 @@ a.news-title-link, a.release-title-link {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 }
 .side-header h1 {
     margin-bottom: 1%;
@@ -3469,7 +3469,7 @@ a.news-title-link, a.release-title-link {
     overflow-y: scroll;
     border: 2px solid #eee;
     padding: 2%;
-    margin-top: 10%;
+    margin-top: 0;
     min-height: 300px;
     max-height: 300px;
 }
@@ -3480,7 +3480,7 @@ a.news-title-link, a.release-title-link {
     overflow-y: scroll;
     border: 2px solid #eee;
     padding: 2%;
-    margin-top: 10%;
+    margin-top: 0;
     min-height: 400px;
     max-height: 400px;
 }
@@ -3493,10 +3493,11 @@ a.news-title-link, a.release-title-link {
 }
 .news-box-title {
     margin: 0 0 3% 0;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 .release-title {
     margin: 0 4% 0 0;
+    font-size: 1.3em;
 }
 
 /*Category*/
