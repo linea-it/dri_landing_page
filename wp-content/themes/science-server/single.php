@@ -43,7 +43,7 @@ require_once 'helper.php';
 			</section>
 			<?php
                 if (in_category('release-notes')):
-                    require_once 'sidebar-preview-release.php';
+                    require_once 'sidebar-previous-release.php';
                 endif;
             ?>
 

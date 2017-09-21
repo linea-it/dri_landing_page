@@ -13,7 +13,7 @@ require_once 'helper.php';
             $cat_name = get_cat_name( $cat_ID );
         ?>
       <h1>
-          Preview Releases
+          Previous Releases
       </h1>
     </header>
     <div class="releases-box">
