@@ -2572,6 +2572,8 @@ footer.entry-meta {
 	color: #686758;
 	font-size: 14px;
 	text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .site-footer .widget-area,
@@ -2628,10 +2630,7 @@ footer.entry-meta {
 }
 
 .site-info {
-	margin: 0 auto;
-	max-width: 1040px;
-	padding: 20px 0;
-	width: 100%;
+	width: 30%;
 }
 
 #wpstats {
@@ -3370,7 +3369,6 @@ a.login-link:hover {
 /*Footer*/
 
 .site-info {
-	margin: 0 0 0 auto;
 	max-width: 480px;
 }
 .site-info a {
@@ -3553,4 +3551,46 @@ span.fscf-required-indicator {
 .right-block .title {
     color: #000 !important;
     margin: 0 !important;
+}
+
+/*Logos*/
+footer {
+    justify-content: space-between;
+}
+section.logos-apoio {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 23%;
+    align-items: center;
+    margin-left: 5%;
+}
+.site-footer {
+    background-color: #bfbfbf;
+}
+.site-footer a {
+    color: #fff;
+}
+.logo {
+    max-width: 22%;
+    margin: 2% 5%;
+}
+.logos-apoio img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #bbb;
+}
+section.social-logos {
+    width: 20%;
+}
+section.social-logos i {
+    font-size: 3em;
+    margin: 0 1%;
+    color: #215078;
+}
+section.social-logos i:hover {
+    color: #5FA2DD;
+}
+.social-title {
+    margin: 0 0 1% 0;
+    color: #fff;
 }
