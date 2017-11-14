@@ -15,19 +15,29 @@
 			<?php get_sidebar( 'main' ); ?>
             <section class="logos-apoio">
                 <div class="logo">
-                    <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/logo-capes_150x150_wbg.png'?>" alt="Logo capes">
+                    <a href="http://www.capes.gov.br/">
+                        <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/logo-capes_150x150_wbg.png'?>" alt="Logo capes">
+                    </a>
                 </div>
                 <div class="logo">
-                    <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/logo-cnpq_150x150_wbg.png'?>" alt="Logo cnpq">
+                    <a href="http://cnpq.br/">
+                        <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/logo-cnpq_150x150_wbg.png'?>" alt="Logo cnpq">
+                    </a>
                 </div>
                 <div class="logo">
-                    <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/logo_faperj_cor_250x250_wbg.jpg'?>" alt="Logo faperj">
+                    <a href="http://www.faperj.br/">
+                        <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/logo_faperj_cor_250x250_wbg.jpg'?>" alt="Logo faperj">
+                    </a>
                 </div>
                 <div class="logo">
-                    <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/marca-finep_250x250_wbg.jpg'?>" alt="Logo finep">
+                    <a href="http://www.finep.gov.br/">
+                        <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/marca-finep_250x250_wbg.jpg'?>" alt="Logo finep">
+                    </a>
                 </div>
                 <div class="logo">
-                    <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/e-universo_sans_01-136x136.png'?>" alt="Logo inct">
+                    <a href="http://www.linea.gov.br/010-ciencia/1-projetos/3-inct-do-e-universo-2/">
+                        <img src="<?php  echo get_site_url() . '/wp-content/uploads/2017/11/e-universo_sans_01-136x136.png'?>" alt="Logo inct">
+                    </a>
                 </div>
             </section>
             <section class="social-logos">
