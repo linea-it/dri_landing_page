@@ -3595,3 +3595,37 @@ section.social-logos i:hover {
     margin: 0 0 1% 0;
     color: #fff;
 }
+
+/*Tutorial Videos*/
+.help-videos-container {
+    box-sizing: border-box;
+    height: 400px;
+}
+.videos-lista {
+    height: inherit;
+}
+.video-container, .video-panel {
+    height: inherit;
+}
+.video-item {
+    padding: 4%;
+    margin: 0;
+}
+.video-item:hover {
+    cursor: pointer;
+    background-color: #eee;
+}
+.ui-accordion .ui-accordion-content {
+    padding: 0;
+}
+#ytb-frame {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+#ytb-frame.active {
+    display: block;
+}
+#video-title {
+    margin: 0;
+}

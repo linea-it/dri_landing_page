@@ -26,6 +26,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/images/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/js/jquery-ui-1.12.1/jquery-ui.min.css">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->

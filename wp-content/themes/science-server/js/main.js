@@ -13,6 +13,11 @@ var logout_path = '/dri/api/api-auth/logout/?next=';
 
 getUser();
 
+$( "#accordion" ).accordion({
+  active: 0,
+  heightStyle: "fill"
+});
+
 function getUser() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -50,4 +55,15 @@ function setUsername(username) {
         loginLink.getAttributeNode('href').value = url_base + login_path + pathname;
     }
 
+}
+
+function showVideo(evt) {
+    var item = evt.currentTarget;
+    var ytbID = item.getAttribute("data-idytb");
+    var embed_url = "http://youtube.com/embed/" + ytbID;
+    var ytb_frame = document.getElementById("ytb-frame");
+    var video_title = document.getElementById("video-title");
+    ytb_frame.className = "active";
+    ytb_frame.setAttribute("src", embed_url);
+    video_title.innerHTML = item.innerHTML;
 }
