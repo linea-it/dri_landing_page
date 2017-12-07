@@ -60,7 +60,7 @@ function setUsername(username) {
 function showVideo(evt) {
     var item = evt.currentTarget;
     var ytbID = item.getAttribute("data-idytb");
-    var embed_url = "http://youtube.com/embed/" + ytbID;
+    var embed_url = "https://youtube.com/embed/" + ytbID;
     var ytb_frame = document.getElementById("ytb-frame");
     var video_title = document.getElementById("video-title");
     ytb_frame.className = "active";
