@@ -1,5 +1,12 @@
 <?php
 
+function get_api_videos_url(){
+    $api_query = '/dri/api/tutorial/?format=json';
+    $result = parse_url(get_site_url());
+    $port = isset($result['port']) ? ':' . $result['port'] : '';
+    return $result['scheme'] . "://" . $result['host'] . $port . $api_query;
+}
+
 function get_categorias($obj_json){
     $result_array = array();
     foreach ($obj_json as $item) {

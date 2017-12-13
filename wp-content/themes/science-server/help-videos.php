@@ -20,7 +20,8 @@ require 'ytb_functions.php';
                     <div class="help-videos-container row">
                         <section class="videos-lista col-md-4">
                         <?php
-                            $json = file_get_contents("https://desportal.cosmology.illinois.edu/dri/api/tutorial/?format=json");
+                            $url = get_api_videos_url();
+                            $json = file_get_contents($url);
                             $obj = json_decode($json);
                             $categorias = get_categorias($obj);
                             ?>
