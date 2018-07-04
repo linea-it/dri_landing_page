@@ -28,7 +28,7 @@ get_header(); ?>
             );
             query_posts($args);   // execute the arguments
         ?>
-        <section class="tools-section col-md-8">
+        <section class="tools-section col-md-10">
             <?php /* The loop */ ?>
             <ul class="tool-box-container">
                 <?php while ( have_posts() ) : the_post(); ?>
@@ -54,9 +54,11 @@ get_header(); ?>
     <?php else : ?>
     	<?php get_template_part( 'content', 'none' ); ?>
     <?php endif; ?>
+    <!--
         <section class="sidebar-news-section col-md-3 col-md-offset-1">
             <?php get_sidebar('news') ?>
         </section>
+    -->
     </div><!-- #content -->
     </div><!-- #primary -->
 
