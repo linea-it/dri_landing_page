@@ -28,7 +28,7 @@ get_header(); ?>
             );
             query_posts($args);   // execute the arguments
         ?>
-        <section class="tools-section col-md-10">
+        <section class="tools-section col-md-12">
             <?php /* The loop */ ?>
             <ul class="tool-box-container">
                 <?php while ( have_posts() ) : the_post(); ?>
