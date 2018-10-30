@@ -52,5 +52,24 @@
                 </nav><!-- #site-navigation -->
 			</div><!-- #navbar -->
 		</header><!-- #masthead -->
+        <?php
+            $query_result = new WP_Query(
+                array(
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'category',
+                            'field'    => 'slug',
+                            'terms'    => 'alerta'
+                        ),
+                    )
+                ) 
+            );
+            if ($query_result->have_posts()){
+                $query_result->the_post();
+                ?>
+                    <p class="header-alert"><?php echo get_the_content();?></p>
+                <?php
+            }
+        ?>
 
 		<div id="main" class="site-main">
