@@ -14,12 +14,14 @@ pipeline {
                 }
             }
             steps {
+              dir('wordpress') {
                 script {
-                dockerImage = docker.build registry + ":$GIT_COMMIT"
-                docker.withRegistry( '', registryCredential ) {
-                dockerImage.push()
+                    dockerImage = docker.build registry + ":$GIT_COMMIT"
+                    docker.withRegistry( '', registryCredential ) {
+                    dockerImage.push()
+                    }
+                    sh "docker rmi $registry:$GIT_COMMIT"
                 }
-                sh "docker rmi $registry:$GIT_COMMIT"
             }
         }
     }
