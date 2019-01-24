@@ -20,7 +20,7 @@ pipeline {
                     docker.withRegistry( '', registryCredential ) {
                     dockerImage.push()
                     }
-                    sh "docker rmi $registry:$GIT_COMMIT"
+                    sh "docker rmi $registry:WP$GIT_COMMIT"
                 }
               }
               dir('data') {
@@ -29,7 +29,7 @@ pipeline {
                       docker.withRegistry( '', registryCredential ) {
                       dockerImage.push()
                       }
-                      sh "docker rmi $registry:$GIT_COMMIT"
+                      sh "docker rmi $registry:MYSQL$GIT_COMMIT"
                   }
               }
         }
