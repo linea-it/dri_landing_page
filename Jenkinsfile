@@ -16,13 +16,22 @@ pipeline {
             steps {
               dir('wordpress') {
                 script {
-                    dockerImage = docker.build registry + ":$GIT_COMMIT"
+                    dockerImage = docker.build registry + ":WP$GIT_COMMIT"
                     docker.withRegistry( '', registryCredential ) {
                     dockerImage.push()
                     }
                     sh "docker rmi $registry:$GIT_COMMIT"
                 }
-            }
+              }
+              dir('data') {
+                  script {
+                      dockerImage = docker.build registry + ":MYSQL$GIT_COMMIT"
+                      docker.withRegistry( '', registryCredential ) {
+                      dockerImage.push()
+                      }
+                      sh "docker rmi $registry:$GIT_COMMIT"
+                  }
+              }
         }
     }
   }

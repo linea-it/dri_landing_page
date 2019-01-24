@@ -1,22 +1,16 @@
 version: "3.6"
 services: 
   mysql:
-    image: mysql:5.7
-    restart: always
+    build: ./data
     env_file:
-      - .env    
-    volumes:
-      - ./data:/data
-
+      - .env
 
   wordpress:
     build: ./wordpress
-    image: dri_landing_page
-    restart: always
     env_file:
       - .env    
     ports:
-      - 8080:80
+      - 80:80
     volumes:
       - ./wordpress:/var/www/html
     depends_on:
