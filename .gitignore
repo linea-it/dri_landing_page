@@ -3,3 +3,4 @@
 .env
 # Docker compose
 docker-compose.yml
+wordpress/wp-content/wflogs/
