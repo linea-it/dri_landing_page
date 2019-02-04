@@ -286,7 +286,7 @@ function wp_ssl_constants() {
 	 */
 	if ( !defined( 'FORCE_SSL_ADMIN' ) ) {
 		if ( 'https' === parse_url( get_option( 'siteurl' ), PHP_URL_SCHEME ) ) {
-			define( 'FORCE_SSL_ADMIN', true );
+			define( 'FORCE_SSL_ADMIN', false );
 		} else {
 			define( 'FORCE_SSL_ADMIN', false );
 		}
@@ -298,7 +298,7 @@ function wp_ssl_constants() {
 	 * @deprecated 4.0.0
 	 */
 	if ( defined( 'FORCE_SSL_LOGIN' ) && FORCE_SSL_LOGIN ) {
-		force_ssl_admin( true );
+		force_ssl_admin( false );
 	}
 }
 

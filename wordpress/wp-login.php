@@ -771,7 +771,7 @@ default:
 		if ( $user ) {
 			if ( get_user_option('use_ssl', $user->ID) ) {
 				$secure_cookie = true;
-				force_ssl_admin(true);
+				force_ssl_admin(false);
 			}
 		}
 	}
