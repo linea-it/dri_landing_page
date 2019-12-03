@@ -12,7 +12,7 @@ require 'ytb_functions.php';
 
     <div id="primary" class="content-area">
         <div id="content" class="site-content" role="main">
-
+                <?php the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('container'); ?>>
 
                     <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -20,8 +20,14 @@ require 'ytb_functions.php';
                     <div class="help-videos-container row">
                         <section class="videos-lista col-md-4">
                         <?php
+                            $arrContextOptions=array(
+                                "ssl"=>array(
+                                    "verify_peer"=>false,
+                                    "verify_peer_name"=>false,
+                                ),
+                            );
                             $url = get_api_videos_url();
-                            $json = file_get_contents($url);
+                            $json = file_get_contents($url, false, stream_context_create($arrContextOptions));
                             $obj = json_decode($json);
                             $categorias = get_categorias($obj);
                             ?>
